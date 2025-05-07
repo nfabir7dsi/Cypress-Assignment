@@ -129,4 +129,8 @@ describe('End to End Testing for OrangeHRM', () => {
     })
 
   })
+
+  after(() => {
+    cy.writeFile('cypress/fixtures/empData.json',{})
+  })
 })
