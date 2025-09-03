@@ -6,5 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: "https://opensource-demo.orangehrmlive.com/",
+    specPattern: "cypress/tests/**/*.js",
   },
 });

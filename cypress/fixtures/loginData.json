@@ -1,0 +1,13 @@
+{
+    "validUser": {
+        "username": "Admin",
+        "password": "admin123",
+        "welcomeMessage": "Dashboard"
+    },
+    
+    "invalidUser": {
+        "username": "invaliduser",
+        "password": "wrongpassword",
+        "errorMessage": "Invalid credentials"
+    }
+}
