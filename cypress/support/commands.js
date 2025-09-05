@@ -23,3 +23,22 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import loginPage from "../pages/Login/loginPage";
+import navbar from "../pages/Navbar/navbar";
+
+Cypress.Commands.add('login', (username, password) => {
+    loginPage.enterUsername(username);
+    loginPage.enterPassword(password);
+    loginPage.clickLogin();
+});
+
+Cypress.Commands.add('logout', () => {
+    navbar.clickProfileSpan();
+    navbar.clickLogoutOption();
+    loginPage.verifyLoginPage('Login');
+});
+
+Cypress.Commands.add('waitTillVisible', (selector, timeout = 10000) => {
+    cy.get(selector, { timeout }).should('be.visible');
+});

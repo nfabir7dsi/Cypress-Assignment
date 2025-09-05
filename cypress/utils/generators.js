@@ -1,4 +1,18 @@
-class PasswordGenerator {
+import { faker } from '@faker-js/faker';
+
+class Generators {
+
+    generateFirstName(gender) {
+        return faker.person.firstName(gender);
+    }
+
+    generateMiddleName(gender) {
+        return faker.person.middleName(gender);
+    }
+
+    generateLastName(gender) {
+        return faker.person.lastName(gender);
+    }
 
     generateRandomPassword(size) {
         const smallChars = "abcdefghijklmnopqrstuvwxyz";
@@ -24,4 +38,4 @@ class PasswordGenerator {
     }
 }
 
-export default new PasswordGenerator;
+export default new Generators();
