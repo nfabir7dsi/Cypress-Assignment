@@ -1,13 +1,13 @@
 class MyInfoObject {
     employeeFullName = 'div[class="orangehrm-edit-employee-name"] > h6';
     employeeId = 'label:contains("Employee Id")';
-    employeeGenderMale = 'label:contains("male")';
+    employeeGender = 'label';
     
     submitButton1 = 'p:contains("* Required") + button';
     submitButton2 = 'button[type="submit"]';
 
     bloodTypeDropdown = 'label:contains("Blood Type")';
-    bloodTypeOption = '.oxd-select-dropdown > :contains("O+")';
+    bloodTypeOption = 'div[class*="oxd-select-dropdown"]';
 
     getEmployeeFullName() {
         return this.employeeFullName;
@@ -17,8 +17,8 @@ class MyInfoObject {
         return this.employeeId;
     }
 
-    getEmployeeGenderMale() {
-        return this.employeeGenderMale;
+    getEmployeeGender() {
+        return this.employeeGender;
     }
 
     getSubmitButton1() {

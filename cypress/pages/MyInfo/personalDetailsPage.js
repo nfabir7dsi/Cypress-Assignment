@@ -18,17 +18,17 @@ class PersonalDetailsPage {
         });
     }
 
-    selectGenderMale() {
-        cy.get(myInfoObject.getEmployeeGenderMale()).click();
+    selectGender(gender) {
+        cy.get(myInfoObject.getEmployeeGender()).contains(gender).click();
     }
 
     clickSubmitButton1() {
         cy.get(myInfoObject.getSubmitButton1()).click();
     }
 
-    selectBloodTypeOPositive() {
+    selectBloodType(bloodType) {
         cy.get(myInfoObject.getBloodTypeDropdown()).parent().siblings('div').click();
-        cy.get(myInfoObject.getBloodTypeOption()).click();
+        cy.get(myInfoObject.getBloodTypeOption()).contains(bloodType).click();
     }
 
     clickSubmitButton2() {

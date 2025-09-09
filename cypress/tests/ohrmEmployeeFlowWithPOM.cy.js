@@ -31,12 +31,12 @@ describe('Orange HRM Testing with POM for Employee', () => {
             }
         );
 
-        personalDetailsPage.selectGenderMale();
+        personalDetailsPage.selectGender("male");
         personalDetailsPage.clickSubmitButton1();
         // cy.waitTillVisible(dashboardPage.toasterMessage);
         commonUtils.verifyToasterMessage('Successfully Updated');
 
-        personalDetailsPage.selectBloodTypeOPositive();
+        personalDetailsPage.selectBloodType("O+");
         personalDetailsPage.clickSubmitButton2();
         // cy.waitTillVisible(dashboardPage.toasterMessage);
         commonUtils.verifyToasterMessage('Successfully Saved');
