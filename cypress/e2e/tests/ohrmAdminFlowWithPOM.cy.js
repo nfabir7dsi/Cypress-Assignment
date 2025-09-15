@@ -1,5 +1,5 @@
 import dashboardPage from "../../support/pages/Dashboard/dashboardPage";
-import PIMPage from "../../support/pages/PIM/PIMPage";
+import pimPage from "../../support/pages/PIM/pimPageHome";
 import addEmployeePage from "../../support/pages/PIM/addEmployeePage";
 import personalDetailsPage from "../../support/pages/MyInfo/personalDetailsPage";
 import directoryPage from "../../support/pages/Directory/directoryPage";
@@ -38,7 +38,7 @@ describe('Orange HRM Testing with POM for Admin', () => {
         navbar.verifyPage('PIM');
 
         // Add Employee
-        PIMPage.clickAddButton();
+        pimPage.clickAddButton();
         cy.waitTillVisible(addEmployeeObject.getAddEmployeeHeader());
         addEmployeePage.verifyOnTheAddEmployeePage('Add Employee');
 
@@ -63,9 +63,9 @@ describe('Orange HRM Testing with POM for Admin', () => {
         // Search Employee by ID
         dashboardPage.clickOnTheSideMenuItem("PIM");
         cy.fixture('employeeData').then((emp) => {
-            PIMPage.enterEmployeeId(emp.employeeId);
-            PIMPage.clickSearchButton();
-            PIMPage.verifySearchedEmployee('(1) Record Found');
+            pimPage.enterEmployeeId(emp.employeeId);
+            pimPage.clickSearchButton();
+            pimPage.verifySearchedEmployee('(1) Record Found');
         });
 
         // Directory search employee by Employee Name

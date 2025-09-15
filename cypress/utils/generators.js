@@ -51,4 +51,4 @@ class Generators {
     }
 }
 
-export default new Generators;
+export default new Generators();
