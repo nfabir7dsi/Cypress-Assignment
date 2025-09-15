@@ -24,8 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-import loginPage from "../pages/Login/loginPage";
-import navbar from "../pages/Navbar/navbar";
+import loginPage from "./pages/Login/loginPage";
+import navbar from "./pages/Navbar/navbar";
 
 Cypress.Commands.add('login', (username, password) => {
     loginPage.enterUsername(username);
@@ -35,7 +35,7 @@ Cypress.Commands.add('login', (username, password) => {
 
 Cypress.Commands.add('logout', () => {
     navbar.clickProfileSpan();
-    navbar.clickLogoutOption();
+    navbar.clickLogoutOption("Logout");
     loginPage.verifyLoginPage('Login');
 });
 

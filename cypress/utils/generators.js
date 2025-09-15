@@ -14,6 +14,19 @@ class Generators {
         return faker.person.lastName(gender);
     }
 
+    generateFullName(firstName, lastName) {
+        return firstName + " " + lastName;
+    }
+
+    generateUserName(firstName, lastName) {
+        const randNo = Math.floor(Math.random() * 10);
+        return firstName + lastName + randNo;
+    }
+
+    generateEmployeeId() {
+        return Math.floor(Math.random() * 100);
+    }
+
     generateRandomPassword(size) {
         const smallChars = "abcdefghijklmnopqrstuvwxyz";
         const capChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -38,4 +51,4 @@ class Generators {
     }
 }
 
-export default new Generators();
+export default new Generators;
